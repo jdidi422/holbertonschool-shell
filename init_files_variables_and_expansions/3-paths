@@ -1,5 +1,5 @@
 #!/bin/bash
-DIRS=$(find . -type d -mindepth $n)
+echo $(echo $PATH | tr ":" "\n" | wc -l)
 
 
 
