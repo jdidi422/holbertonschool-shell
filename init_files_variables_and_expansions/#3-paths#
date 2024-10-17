@@ -1,2 +1,0 @@
-#!/bin/bashx
-echo $PATH | tr : $''
