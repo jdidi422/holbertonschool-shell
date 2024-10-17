@@ -1,5 +1,5 @@
 #!/bin/bash
-echo ${#PATH//:}/ }
+echo $(echo $PATH | tr ":" "\n" | wc -l)
 
 
 
