@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/bin/bashx
 echo $PATH | tr : $''
