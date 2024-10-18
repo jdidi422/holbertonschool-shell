@@ -1,2 +1,12 @@
 #!/bin/bash
-grep -c -i "bin" /etc/passwd
+
+# Function to perform ROT13 encryption/decryption
+rot13() {
+    tr 'A-Za-z' 'N-ZA-Mn-za-m'
+}
+
+# Read input and apply ROT13
+while IFS= read -r line; do
+    echo "$line" | rot13
+done
+
