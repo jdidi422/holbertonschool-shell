@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "obase=5; $(echo "obase=10; ibase=3; $WATER + ibase=4; $STIR" | bc)" | bc
+result=$(printf '%d\n' "$((3#$WATER + 4#$STIR))"); printf '%s\n' "obase=5; $result" | awk '{for(i=0;i<$1;i++) {n=0; for(j=1;j<=i;j++){n=n*5+((($1%5)^j)/((5^(j-1))%5));}; print n}}' | tail -n1
